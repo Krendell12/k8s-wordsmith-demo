@@ -6,6 +6,6 @@ RUN go build dispatcher.go
 # RUN
 FROM alpine:edge
 EXPOSE 80
-CMD ["/dispatcher"]
 COPY --from=builder /go/dispatcher /
 COPY static /static/
+CMD ["/dispatcher"]
